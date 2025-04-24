@@ -6,6 +6,7 @@
 
 .mainContainer {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
@@ -21,7 +22,7 @@
     width: 30%;
     height: 35px;
     padding: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size: 1rem;
     border: 1px solid #ccc;
 }
@@ -222,6 +223,14 @@
         font-size: 12px; /* Reset to original button font size for large screens */
     }
     
+}
+@media (max-width:500px) {
+    .mainContainer{
+        flex-direction: column;
+    }
+    .search{
+        width:fit-content;
+    }
 }
 @media (max-width:450px) {
     .recipesContainer {
