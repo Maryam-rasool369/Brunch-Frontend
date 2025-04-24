@@ -1,0 +1,71 @@
+
+  /* Form Styling */
+  .form {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input Fields */
+  .input, .fileInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    /* border-radius: 8px; */
+    font-size: 16px;
+  }
+  
+  /* Rich Text Editor */
+  .editor {
+    height: 300px;
+  }
+  
+  /* Button Styling */
+  .button {
+    margin-top: 45px;
+    width: 15%;
+    height: 40px;
+    /* float: right; */
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background: #343434; /* Vibrant orange */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    /* border-radius: 8px; */
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background: #5e5e5e; /* Slightly darker shade on hover */
+  }
+  
+  .button:active {
+    transform: scale(0.98); /* Slight click effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form {
+      padding: 20px;
+    }
+    .heading {
+      font-size: 28px;
+    }
+    .input, .button {
+      font-size: 16px;
+    }
+  }
+  

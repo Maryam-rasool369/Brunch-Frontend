@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /* Main Container */
+  .container {
+    margin-top: 50px;
+    height: 100vh;
+    /* background-color: #007bff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    padding: 20px; /* Spacing for smaller screens */
+  }
+  
+  /* Login Box */
+  .loginBox {
+    background: rgba(244, 244, 244, 0.8);
+; /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded edges */
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 400px; /* Limit the box width */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Form Styling */
+  .form {
+    width: 100%;
+  }
+  
+  .inputBox {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #007bff; /* Highlight on focus */
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Register Link */
+  .registerLink {
+    margin-top: 15px;
+  }
+  
+  .para {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .loginBox {
+      padding: 20px 30px;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .input {
+      padding: 8px 12px;
+    }
+  
+    .button {
+      padding: 8px 12px;
+    }
+  }
+  

@@ -1,0 +1,308 @@
+.imageDiv {
+    width: 100vw;
+    height:550px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /* background-color: antiquewhite; */
+}
+
+.image {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    z-index: 1;
+/* display: none; */
+}
+
+
+.imageBowl {
+    /* background-color: aqua; */
+    align-self: center;
+    position: absolute;
+    right: 240px;
+    width: 450px;
+    top: -150px;
+    transform: rotate(-90deg);
+    z-index: 2;
+    opacity: 0;
+    animation: dropIn 1.4s ease-out both;
+}
+
+@keyframes dropIn {
+    0% {
+        top: -150px; /* Start off-screen */
+        right: 100px;
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 35px;
+        right: 240px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1350px) {
+    .imageBowl {
+        animation: dropInSmallScreen 1.4s ease-out both;
+    }
+
+    @keyframes dropInSmallScreen {
+        0% {
+            top: -150px;
+            right: 0px;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 30px;
+            right: 50px; /* Move more to the right on smaller screens */
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width:1000px) {
+    .imageBowl {
+        width: 430px;
+    }
+}
+@media (max-width:900px) {
+    .imageDiv{
+        height:500px
+    }
+    .imageBowl {
+        width: 380px;
+    }
+}
+@media (max-width:800px) {
+    .imageBowl {
+        width: 350px;
+        animation: dropInSmallScreen 1.4s ease-out both;
+    }
+    @keyframes dropInSmallScreen {
+        0% {
+            top: -150px;
+            right: 0px;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 30px;
+            right: 20px;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width:700px) and (min-height:800px){
+    .imageBowl {
+        margin-top: px;
+        width: 450px;
+        animation: dropInCenter 1.4s ease-out both;
+    }
+    .imageDiv {
+        /* background-color: #161618; */
+        width: 100vw;
+        height:500px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    @keyframes dropInSmallScreen {
+        0% {
+            top: -150px;
+            right: 0px;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 30px;
+            right: 50px;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 700px) and (max-height: 900px) {
+    
+    .imageDiv {
+        width: 100vw;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .image {
+        width: 183%;
+        height: inherit;
+        position: absolute;
+        top: 0px;
+        right: -20px;
+        z-index: 1;
+    }
+    .imageBowl {
+        width: 400px;
+        animation: dropInCenter 1.4s ease-out both;
+    }
+
+    @keyframes dropInCenter {
+        0% {
+            top: -150px;
+            left: 10%;
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 530px) and (max-height: 900px) {
+    .imageDiv {
+        width: 100vw;
+        height: 420px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .image {
+        width: 188%;
+        height: inherit;
+        position: absolute;
+        top: 0px;
+        right: -20px;
+        z-index: 1;
+    }
+
+    .imageBowl {
+        padding: 0 20px;
+        width: 80%;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%) rotate(0deg);
+        animation: dropInCenter 1.4s ease-out both;
+    }
+
+    @keyframes dropInCenter {
+        0% {
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width:420px) and (max-height: 900px) {
+    .imageDiv {
+        width: 100vw;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    .imageBowl {
+        width: 100%;
+        animation: dropInCenter 1.4s ease-out both;
+    }
+
+    @keyframes dropInCenter {
+        0% {
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 530px) and (max-height: 800px) {
+    .imageBowl {
+        width: 100%;
+        animation: dropInCenter 1.4s ease-out both;
+    }
+
+    @keyframes dropInCenter {
+        0% {
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 530px) and (max-height: 700px) {
+    .imageBowl {
+        width: 100%;
+        animation: dropInCenter 1.4s ease-out both;
+    }
+
+    @keyframes dropInCenter {
+        0% {
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}

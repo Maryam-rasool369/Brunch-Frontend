@@ -1,0 +1,55 @@
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navItem {
+    position: relative;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 0.07cap;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover and Active States */
+.navLink:hover,
+.active {
+    color: #343434;
+    font-weight: 500;
+}
+
+/* Underline effect */
+.navLink::after,
+.active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #343434;
+    transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after,
+.active::after {
+    width: 100%;
+}
+
+@media (max-width:1000px) {
+    .navList {
+        gap:15px
+    }
+}

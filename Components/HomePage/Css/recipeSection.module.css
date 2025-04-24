@@ -1,0 +1,83 @@
+/* Default Styles for Large Screens */
+.recipeContainer {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    overflow: hidden;
+    padding: 70px 100px;
+    align-items: center;
+}
+
+.imagesContainer {
+    flex: 1;
+}
+
+.image {
+    height: 450px;
+    transform: scale(1.05);
+    width: 100%;
+    max-width: 500px;
+}
+
+.textSection {
+    flex: 1;
+    /* background-color: aqua; */
+}
+
+.heading {
+    margin: 20px 0 20px;
+}
+
+.para1 {
+    margin: 20px 0;
+}
+.link {
+    color: rgb(55, 55, 55);
+    text-decoration: none;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust as needed */
+    width: 0;
+    height: 2px; /* Thickness of underline */
+    background-color: currentColor;
+    transition: width 0.4s ease-in-out;
+}
+
+.link:hover {
+    color: #212121;
+
+}
+
+.link:hover::after {
+    width: 100%;
+
+}
+
+/* Responsive Design for Medium and Small Screens */
+@media screen and (max-width: 1024px) {
+    .recipeContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centering text for better readability */
+        padding: 50px 30px; /* Adjusted padding for smaller screens */
+        gap: 0px;
+    }
+
+    .imagesContainer {
+        order: -1; /* Moves the image above the text */
+    }
+
+    .image {
+        width: 100%; /* Ensures image is responsive */
+        height: auto;
+        /* max-height: 400px; */
+    }
+}

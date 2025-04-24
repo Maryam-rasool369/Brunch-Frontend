@@ -1,0 +1,15 @@
+.main{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellowgreen; */
+    padding: 20px 50px ;
+}
+.heading{
+    font-size: 20px;
+}
+.pendingPost{
+    margin: 20px;
+    text-align: center;
+    /* background-color: aqua; */
+}

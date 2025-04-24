@@ -1,0 +1,136 @@
+.navbarRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.getCreativeButton {
+    background-color: #484848;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    letter-spacing: 0.07cap;
+
+}
+
+.getCreativeButton:hover {
+    /* background-color: #bf6339; */
+    background-color: #e76123;
+    /* transform: scale(1.03); */
+}
+
+.adminPanelLink {
+    font-size: medium;
+    color: #4a4a4a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.adminPanelLink:hover {
+    color: #ff5733;
+}
+
+.profile_menu_container {
+    width:fit-content;
+    height:fit-content;
+    /* width: 20px; */
+    /* height: 20px; */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 6px;
+    /* background-color: #80b11e; */
+}
+
+.profile_icon_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* padding: 5px; */
+}
+
+.profile_icon {
+    width: 18px;
+    height: 18px;
+    color: #3e3e3e;
+    transition: color 0.3s ease-in-out;
+}
+
+.profile_icon:hover {
+    color: #6e6e6e;
+}
+
+.dropdown_menu {
+    margin-top: 15px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: gray 3px solid;
+    /* border-radius: 5px; */
+    width: 150px;
+    text-align: left;
+    /* padding-bottom: 10px; */
+    z-index: 10;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.profile_menu_container:hover .dropdown_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown_item {
+
+    list-style: none;
+    padding-top: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: -20px;
+}
+
+.dropdown_item:hover {
+    /* color: #ff5733; */
+    font-weight: 600;
+}
+
+.link {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 0.07cap;
+}
+
+.link:hover {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width:1050px) {
+    .getCreativeButton {
+        
+        padding: 6px 10px;
+        font-size: 12px;
+            
+    }
+    .adminPanelLink {
+        font-size: 15px;
+        color: #4a4a4a;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+}

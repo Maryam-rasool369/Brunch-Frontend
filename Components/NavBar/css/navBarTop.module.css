@@ -1,0 +1,39 @@
+.navLogo {
+    position: fixed;  /* Sticks to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+    /* background-color: rgb(104, 59, 59); */
+
+}
+
+.logoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+}

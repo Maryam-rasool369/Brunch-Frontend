@@ -1,0 +1,138 @@
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+
+.dots {
+    margin-left: 10px;
+}
+
+/* General Styles */
+.container {
+    max-width: 800px;
+    margin: 100px auto 40px auto; /* 120px top margin */
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+/* Edit Button */
+.editPostButton {
+    align-self: flex-end;
+    background-color: #383838; /* Brown */
+    color: white;
+    border: none;
+    padding: 8px 15px 8px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin-bottom: 25px;
+}
+
+.editPostButton:hover {
+    background-color: #686868; /* Olive Green */
+}
+
+/* Heading */
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    color: #333;
+    margin-bottom: 25px;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word; /* Ensure long words break */
+    width: 100%; /* Ensure the title takes full width */
+}
+
+/* Image */
+.imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+/* Info Section */
+.info {
+    display: flex;
+    align-items: center;
+}
+
+/* Author */
+.author {
+    font-size: 1rem;
+    color: #1d1d1d;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display';
+    margin-right: 10px;
+}
+
+/* Date */
+.date {
+    font-size: 1rem;
+    color: #323232;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display';
+}
+
+/* Content */
+.content {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+    text-align: justify;
+    width: 100%;
+}
+
+/* Ensure images inside content are properly styled */
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .content {
+        font-size: 1rem;
+    }
+    .image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.6rem;
+    }
+    .content {
+        font-size: 0.95rem;
+    }
+    .image {
+        height: 250px;
+    }
+}

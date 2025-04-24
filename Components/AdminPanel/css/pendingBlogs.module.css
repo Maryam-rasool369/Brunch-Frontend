@@ -1,0 +1,168 @@
+.post {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 680px; /* Fixed width */
+    margin: 10px auto;
+}
+
+.image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.text {
+    flex-grow: 1;
+    overflow: hidden; /* Prevent text overflow */
+}
+
+.text h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    word-wrap: break-word; /* Break long words */
+}
+
+.info {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.summary {
+    margin: 10px 0;
+    color: #444;
+    word-wrap: break-word; /* Break long words */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+/* Buttons */
+.approve, .decline {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.approve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.decline {
+    background-color: red;
+    color: white;
+}
+
+.approve:hover {
+    background-color: #45a049;
+}
+
+.decline:hover {
+    background-color: #d43f3f;
+}
+
+/* ====== RESPONSIVE STYLES ====== */
+
+@media (max-width: 768px) {
+    .post {
+        width: 90%; /* Adjust width for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .text h2 {
+        font-size: 18px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .approve, .decline {
+        width: 100%; /* Full-width buttons on small screens */
+    }
+}
+
+@media (max-width: 493px) {
+    .post {
+        width: 95%; /* Further adjust width for very small screens */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .text h2 {
+        font-size: 16px;
+    }
+
+    .summary {
+        font-size: 14px;
+    }
+
+    .approve, .decline {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text h2 {
+        font-size: 14px;
+    }
+
+    .summary {
+        font-size: 12px;
+    }
+
+    .approve, .decline {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    .text h2 {
+        font-size: 12px;
+    }
+
+    .summary {
+        font-size: 10px;
+    }
+
+    .approve, .decline {
+        font-size: 10px;
+    }
+}

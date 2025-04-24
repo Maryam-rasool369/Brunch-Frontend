@@ -1,0 +1,147 @@
+/* .container{
+margin-top: 80px;
+position:relative;
+background-color: #444;
+} */
+.main {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px;
+    margin-top: 130px;
+    padding: 0 10px;
+}
+
+.heading {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.mainImage {
+    width: 96%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.para {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+.cuisinesList {
+    /* background-color: #444; */
+    max-width: 900px;
+    margin: 10px auto;
+    /* margin-top: 100px; */
+
+    padding: 20px;
+}
+
+.cuisinesList h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+    /* text-align: center; */
+}
+
+.image {
+    width: 100%;
+    min-height: 450px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 30px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+
+    .cuisinesList h2 {
+        font-size: 26px;
+    }
+
+    .content {
+        font-size: 15px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 480px) {
+    .main {
+        margin-top: 80px;
+    }
+
+    .heading {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .mainImage {
+        width: 90%;
+        max-height: 300px;
+    }
+
+    .para {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .cuisinesList h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        max-height: 250px;
+    }
+
+    .content {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 345px) {
+    .heading {
+        font-size: 24px;
+    }
+
+    .mainImage {
+        width: 90%;
+        max-height: 250px;
+    }
+
+    .para, .content {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+
+    .cuisinesList h2 {
+        font-size: 20px;
+    }
+
+    .image {
+        max-height: 200px;
+    }
+}

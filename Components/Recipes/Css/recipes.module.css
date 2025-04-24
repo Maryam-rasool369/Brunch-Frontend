@@ -1,0 +1,277 @@
+.main {
+    margin-top: 80px;
+    padding: 20px 70px;
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.heading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.search {
+    width: 30%;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+}
+
+.recipesContainer {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Default for small screens (2 columns) */
+.recipesContainer {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.recipe {
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 2px rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    max-width: 270px;
+    max-height: 380px;
+    width: 100%; /* Ensure it takes full width of its grid cell */
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.top {
+    border-bottom: 1px solid #191919;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: start;
+    margin-top: 10px;
+    font-weight: 500;
+
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bottom {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    /* Add styles if needed */
+}
+
+.headingSmall {
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.button {
+    margin: 15px 0px 10px;
+    max-width: 112px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #191919;
+    color: white;
+    font-weight: 500;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 1040px) {
+    .recipesContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .main {
+        margin-top: 80px;
+        padding: 20px 30px;
+        text-align: center;
+    }
+    
+}
+@media (max-width: 900px) {
+    .recipesContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .heading {
+        font-size: 2rem; /* Slightly smaller font for medium screens */
+    }
+
+    .recipe {
+        max-width: 250px; /* Adjust width for medium screens */
+        max-height: 370px; /* Adjust height for medium screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Adjust font size for medium screens */
+    }
+
+    .button {
+        font-size: 13px; /* Adjust button font size for medium screens */
+    }
+}
+
+/* Large screens (4 columns) */
+@media (max-width:750px) {
+    .recipesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main {
+        margin-top: 80px;
+        padding: 20px 70px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3rem; /* Reset to original size for large screens */
+    }
+
+    .recipe {
+        max-width: 270px; /* Reset to original width for large screens */
+        max-height: 400px; /* Reset to original height for large screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Reset to original font size for large screens */
+    }
+
+    .button {
+        font-size: 14px; /* Reset to original button font size for large screens */
+    }
+}
+@media (max-width:650px) {
+    .recipesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main {
+        margin-top: 80px;
+        padding: 20px 70px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3rem; /* Reset to original size for large screens */
+    }
+
+    .recipe {
+        max-width: 270px; /* Reset to original width for large screens */
+        max-height: 400px; /* Reset to original height for large screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Reset to original font size for large screens */
+    }
+
+    .button {
+        font-size: 14px; /* Reset to original button font size for large screens */
+    }
+    
+}
+@media (max-width:590px) {
+    .recipesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main {
+        margin-top: 80px;
+        padding: 20px 30px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3rem; /* Reset to original size for large screens */
+    }
+
+    .recipe {
+        max-width: 270px; /* Reset to original width for large screens */
+        max-height: 350px; /* Reset to original height for large screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Reset to original font size for large screens */
+    }
+    
+    .headingSmall {
+        font-size: 13px;
+    }
+    .desc{
+        font-size: 14px;
+    }
+    .button {
+        margin-top: 6px;
+        font-size: 12px; /* Reset to original button font size for large screens */
+    }
+    
+}
+@media (max-width:450px) {
+    .recipesContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main {
+        margin-top: 80px;
+        padding: 20px 70px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3rem; /* Reset to original size for large screens */
+    }
+
+    .recipe {
+        max-width: 270px; /* Reset to original width for large screens */
+        max-height: 400px; /* Reset to original height for large screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Reset to original font size for large screens */
+    }
+
+    .button {
+        font-size: 14px; /* Reset to original button font size for large screens */
+    }
+    
+}
+@media (max-width:350px) {
+    
+    .main {
+        margin-top: 80px;
+        padding: 20px 30px;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3rem; /* Reset to original size for large screens */
+    }
+
+    .recipe {
+        max-width: 300px; /* Reset to original width for large screens */
+        max-height: 400px; /* Reset to original height for large screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Reset to original font size for large screens */
+    }
+
+    .button {
+        font-size: 14px; /* Reset to original button font size for large screens */
+    }
+    
+}

@@ -1,0 +1,215 @@
+.homeMain {
+    margin-top: 80px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.headingDivSmall{
+    display: none;
+}
+.headingDiv {
+    /* height: 70%; */
+    position: absolute;
+    top: 0;
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: 100;
+    /* background-color: aqua; */
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    margin-left: 40px;
+    margin-top: 80px;
+    /* background-color: #161618; */
+
+
+
+}
+.heading{
+    /* background-color: antiquewhite; */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: start;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    color: #161616;
+}
+.underline{
+    text-decoration: underline 2px;
+}
+
+.getCreativeButton{
+    margin-top: 2rem;
+    height: 42px;
+    width: 140px;
+    color: white;
+    background-color: #161616;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    /* justify-content: center !important; */
+
+}
+.hero
+{
+    height: 150px;
+    background-color: #161618;
+}
+@media (max-width:1000px) {
+    .heading{
+        /* background-color: antiquewhite; */
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        text-align: start;
+        letter-spacing: 0.1rem;
+        margin-top: 10px;
+        color: #161616;
+    }
+    
+}
+@media (max-width:900px) {
+    .heading{
+        /* background-color: antiquewhite; */
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        text-align: start;
+        letter-spacing: 0.1rem;
+        margin-top: 10px;
+        color: #161616;
+    }
+    
+}
+@media (max-width:800px) {
+    .headingDiv{
+        margin-left: 23px;
+    }
+    .heading{
+        /* background-color: antiquewhite; */
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        text-align: start;
+        letter-spacing: 0.1rem;
+        margin-top: 10px;
+        color: #161616;
+    }
+    
+}
+@media (max-width: 700px) {
+    .headingDiv{
+        display: none;
+    }
+    .homeMain {
+
+        background:none;
+    }
+    .headingDivSmall{
+        /* background-color: #848484; */
+
+        margin-top:30px;
+        width: 100%;
+        display: flex;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+
+    }
+    .heading{
+        font-weight: 600;
+        /* background-color: aliceblue; */
+    }
+    .getCreativeButton{
+        margin-top:0px;
+        width: 180px;
+        height: 70px;
+        border-radius:60px;
+        background-color: #161618;
+        color:white;
+        font-size: 17px;
+        align-self: center;
+    }
+}
+@media (max-width:510px) {
+    .heading{
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .getCreativeButton{
+        margin-top:0px;
+        width: 170px;
+        height: 60px;
+        border-radius:60px;
+        background-color: #161618;
+        color:white;
+        font-size: 1.15rem;
+        align-self: center;
+    }
+    
+}
+@media (max-width:471px) {
+    .headingDivSmall{
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .heading{
+        justify-self: center;
+        font-weight: 600;
+        font-size: 2.2rem;
+        /* background-color: aquamarine; */
+        /* margin-bottom: 1rem; */
+    }
+    .getCreativeButton{
+        margin-top:2rem;
+        /* margin-bottom:1.5rem; */
+        width: 170px;
+        height: 60px;
+        border-radius:60px;
+        background-color: #161618;
+        color:white;
+        font-size: 1.15rem;
+        align-self: center;
+    }
+    
+}
+
+@media (max-width:325px) {
+    .heading{
+        font-size: 2rem;
+    }}
+@media (max-width:325px) {
+    .heading{
+        font-size: 1.8rem;
+    }}
+/* @media (max-width: 700px) {
+    .homeMain {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headingDiv {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .getCreativeButton{
+        margin-top: 2rem;
+        height: 42px;
+        width: 140px;
+        color: white;
+        background-color: #161616;
+        border: none;
+        border-radius: 25px;
+        font-size: 15px;
+        font-weight: bold;
+    
+    }
+} */

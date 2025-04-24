@@ -1,0 +1,77 @@
+.cuisineWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cuisine {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+}
+
+/* Active & Hover State */
+.cuisine:hover,
+.active {
+    color: #343434;
+    font-weight: 500;
+}
+
+.cuisine::after,
+.active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #343434;
+    transition: width 0.3s ease-in-out;
+}
+
+.cuisine:hover::after,
+.active::after {
+    width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: gray 3px solid;
+    width: 170px;
+    padding-bottom: 10px;
+    z-index: 10;
+    
+    /* Smooth show/hide effect */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.cuisineWrapper:hover .dropdown_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Items */
+.list {
+    padding: 0;
+}
+
+.dropdown_item {
+    font-weight: normal;
+    margin-left: 10px;
+    /* margin-left: -25px; */
+    list-style: none;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown_item:hover {
+    font-weight: 600;
+}
