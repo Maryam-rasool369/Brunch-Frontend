@@ -1,4 +1,4 @@
-import { Link, Navigate,navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import LoginBackground from './LoginBackground';
 import styles from './login.module.css';
 import { useContext, useState } from 'react';
@@ -27,11 +27,7 @@ function Login() {
             toast.success('Login successful')
             const userInfo = await response.json();
             setUserEmail(userInfo.email)
-            setTimeout(() => {
-              setRedirect(true);
-              navigate('/inspireOthers');
-          }, 1000)
-            // setTimeout(() => setRedirect(true), 1000)
+            setTimeout(() => setRedirect(true), 1000)
             // alert('Login successful')
 
         } else {
@@ -39,9 +35,9 @@ function Login() {
         }
        
     }
-    // if(redirect){
-    //     return <Navigate to='/'></Navigate>
-    // }
+    if(redirect){
+        return <Navigate to='/'></Navigate>
+    }
   return (
     <>
       <LoginBackground />
