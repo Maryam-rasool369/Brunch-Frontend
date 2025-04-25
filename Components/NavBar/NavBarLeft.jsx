@@ -39,7 +39,7 @@ function NavBarBottom() {
     useEffect(() => {
             // Check if user is logged in by checking email or a token
             const fetchProfile = async () => {
-              const response = await fetch(`${import.meta.env.VITE_API_URL}/profile`, {
+              const response = await fetch(`${import.meta.env.VITE_API_URL}profile`, {
                     credentials: 'include',
               });
               if (response.ok) {

@@ -19,7 +19,7 @@ function NavBar() {
 
     useEffect(() => {
         const fetchProfile = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/profile`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}profile`, {
                 credentials: 'include',
             });
             if (response.ok) {
