@@ -36,7 +36,7 @@ function Login() {
        
     }
     if(redirect){
-        return <Navigate to='/'></Navigate>
+        return <Navigate to='/inspireOthers'></Navigate>
     }
   return (
     <>
