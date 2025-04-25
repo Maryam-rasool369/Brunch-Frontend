@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react';
-import styles from './Css/recipes.module.css';
-import { Pagination } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import styles from "./Css/recipes.module.css";
+import { Pagination } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
 
 function Recipes() {
-  const TruncatedText = ({text,maxLenght}) =>{
-    return(
-        <p>
-            {text.length > maxLenght ? text.substring(0, maxLenght) + "..." :text}
-        </p>
-    )
-   }
+  const TruncatedText = ({ text, maxLenght }) => {
+    return (
+      <p>
+        {text.length > maxLenght ? text.substring(0, maxLenght) + "..." : text}
+      </p>
+    );
+  };
 
   const navigate = useNavigate();
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1); // Fixed typo here
   const [recipesPerPage] = useState(12);
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
-    setCurrentPage(1)
+    setCurrentPage(1);
   };
 
   useEffect(() => {
@@ -30,7 +30,9 @@ function Recipes() {
       .then((data) => setRecipes(data));
   }, []);
 
-  const filterRecipes =recipes.filter(recipe => recipe.title.toLowerCase().includes(search.toLowerCase()))
+  const filterRecipes = recipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   // Pagination logic
   const lastIndex = currentPage * recipesPerPage;
@@ -41,62 +43,75 @@ function Recipes() {
     setCurrentPage(page);
   };
 
-  const navigation = (recipeId) =>{
-    navigate(`/recipes/${recipeId}`)
-  }
+  const navigation = (recipeId) => {
+    navigate(`/recipes/${recipeId}`);
+  };
 
-
-if (!recipes) {
-     return (
-       <div className={styles.loading}>
-         Loading
-         <SyncLoader color="#4A4A4A" size={6} speedMultiplier={0.5} className={styles.dots} />
-       </div>
-     );
-   }
- 
   return (
     <div className={styles.main}>
-      <div className={styles.mainContainer}>
-        <h2 className={styles.heading}>Recipes</h2>
-        <input
-          className={styles.search} // Fixed typo here
-          type="text"
-          placeholder="Search recipes"
-          onChange={handleSearch}
-        />
-      </div>
+      {!recipes ? (
+        <div className={styles.loading}>
+          Loading
+          <SyncLoader
+            color="#4A4A4A"
+            size={6}
+            speedMultiplier={0.5}
+            className={styles.dots}
+          />
+        </div>
+      ) : (
+        <div className={styles.mainContainer}>
+          <h2 className={styles.heading}>Recipes</h2>
+          <input
+            className={styles.search} // Fixed typo here
+            type="text"
+            placeholder="Search recipes"
+            onChange={handleSearch}
+          />
+        </div>
+      )}
+
       <div className={styles.recipesContainer}>
         {currentRecipes.map((recipe) => (
-        <>
-          <div onClick={() =>navigation(recipe._id)} key={recipe.id} className={styles.recipe}> {/* Ensure key matches backend */}
-            <div className={styles.top}>
-              <img src={`${import.meta.env.VITE_API_URL}${recipe.image}`} alt="img" className={styles.image} />
-              <h3 className={styles.title}>
-              <TruncatedText text={recipe.title} maxLenght={19} ></TruncatedText>
-              </h3>
+          <>
+            <div
+              onClick={() => navigation(recipe._id)}
+              key={recipe.id}
+              className={styles.recipe}
+            >
+              {" "}
+              {/* Ensure key matches backend */}
+              <div className={styles.top}>
+                <img
+                  src={`${import.meta.env.VITE_API_URL}${recipe.image}`}
+                  alt="img"
+                  className={styles.image}
+                />
+                <h3 className={styles.title}>
+                  <TruncatedText
+                    text={recipe.title}
+                    maxLenght={19}
+                  ></TruncatedText>
+                </h3>
+              </div>
+              {/* Bottom section */}
+              <div className={styles.bottom}>
+                <div className={styles.section}>
+                  <h5 className={styles.headingSmall}>Prep:</h5>
+                  <p className={styles.desc}>{recipe.prepTime}</p>
+                </div>
+                <div className={styles.section}>
+                  <h5 className={styles.headingSmall}>Cook:</h5>
+                  <p className={styles.desc}>{recipe.cookTime}</p>
+                </div>
+                <div className={styles.section}>
+                  <h5 className={styles.headingSmall}>Serves:</h5>
+                  <p className={styles.desc}>{recipe.serves}</p>
+                </div>
+              </div>
+              <button className={styles.button}>View Recipe</button>
             </div>
-            {/* Bottom section */}
-            <div className={styles.bottom}>
-            <div className={styles.section}>
-              <h5 className={styles.headingSmall}>Prep:</h5>
-              <p className={styles.desc}>{recipe.prepTime}</p>
-            </div>
-            <div className={styles.section}>
-              <h5 className={styles.headingSmall}>Cook:</h5>
-              <p className={styles.desc}>{recipe.cookTime}</p>
-            </div>
-            <div className={styles.section}>
-              <h5 className={styles.headingSmall}>Serves:</h5>
-              <p className={styles.desc}>{recipe.serves}</p>
-            </div>
-          
-          </div>
-          <button className={styles.button}>View Recipe</button>
-          </div>
-          
-        </>
-
+          </>
         ))}
       </div>
       <Pagination
