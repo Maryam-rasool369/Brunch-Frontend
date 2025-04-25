@@ -23,6 +23,7 @@ function RecipeDetails() {
       </div>
     );
   }
+  
 
   return (
     <div className={styles.main}>

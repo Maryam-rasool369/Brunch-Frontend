@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './Css/recipes.module.css';
 import { Pagination } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { SyncLoader } from "react-spinners";
 
 function Recipes() {
   const TruncatedText = ({text,maxLenght}) =>{
@@ -43,6 +44,14 @@ function Recipes() {
   const navigation = (recipeId) =>{
     navigate(`/recipes/${recipeId}`)
   }
+   if (!recipes) {
+     return (
+       <div className={styles.loading}>
+         Loading
+         <SyncLoader color="#4A4A4A" size={6} speedMultiplier={0.5} className={styles.dots} />
+       </div>
+     );
+   }
  
   return (
     <div className={styles.main}>
