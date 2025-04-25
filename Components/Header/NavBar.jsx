@@ -19,7 +19,7 @@ function NavBar() {
 
     useEffect(() => {
         const fetchProfile = async () => {
-            const response = await fetch('http://localhost:3001/profile', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/profile`, {
                 credentials: 'include',
             });
             if (response.ok) {
@@ -49,7 +49,7 @@ function NavBar() {
     }
     const handleOptionClick = (option) => {
         if (option === 'logout') {
-            fetch('http://localhost:3001/logout', {
+            fetch(`${import.meta.env.VITE_API_URL}/logout`, {
                 credentials: 'include',
                 method: 'POST',
             }).then((response) => {

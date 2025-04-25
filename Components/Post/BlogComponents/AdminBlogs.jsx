@@ -46,7 +46,7 @@ function AdminBlogs({posts}) {
                 <div className={styles.posts}>
                 <div className={styles.image}>
                     <Link to={`/blogs/${post._id}`} className={styles.link}>
-                    <img src={`http://localhost:3001/${post.image}`} alt="img" />
+                    <img src={`${import.meta.env.VITE_API_URL}/${post.image}`} alt="img" />
                     </Link>
                 </div>
                 <div className={styles.text}>

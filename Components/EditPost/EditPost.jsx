@@ -32,7 +32,7 @@ function EditPost() {
         const [redirect,setRedirect] = useState(false)
 
         useEffect(()=>{
-            fetch('http://localhost:3001/post/'+id).then(response=>{response.json().then(postInfo =>{
+            fetch(`${import.meta.env.VITE_API_URL}/post/`+id).then(response=>{response.json().then(postInfo =>{
                 setTitle(postInfo.title)
                 setContent(postInfo.content)
                 setFiles(postInfo.image)
@@ -53,7 +53,7 @@ function EditPost() {
                 data.set('file', files?.[0])
             }
             
-            const response = await fetch('http://localhost:3001/post',{
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/post`,{
                 method:'PUT',
                 body:data,
                 credentials:'include'

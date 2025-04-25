@@ -9,7 +9,7 @@ function AllBlogs() {
   const [params] = useSearchParams(location.search)
   const type = params.get('type')
   useEffect(()=>{
-    fetch('http://localhost:3001/post').then(response => {response.json().then(posts =>{setPost(posts)})})
+    fetch(`${import.meta.env.VITE_API_URL}/post`).then(response => {response.json().then(posts =>{setPost(posts)})})
 
   },[type])
 

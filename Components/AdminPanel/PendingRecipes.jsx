@@ -13,7 +13,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
        }
     // const {postStatus,setPostStatus} = useContext(UserContext)
     async function approveRecipe() {
-        const response = await fetch(`http://localhost:3001/recipe/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/recipe/${_id}`,{
             method:'PATCH',
             credentials:'include',
             // data:data
@@ -24,7 +24,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
     }
     }
     async function deleteRecipe() {
-        const response = await fetch(`http://localhost:3001/recipe/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/recipe/${_id}`,{
             method:'DELETE',
             credentials:'include',
         }
@@ -38,7 +38,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
             <div className={styles.post}>
                 <div className={styles.image}>
                     <Link to={`/blogs/${_id}`} className={styles.link}>
-                        <img src={'http://localhost:3001/' + image} alt="img" />
+                        <img src={`${import.meta.env.VITE_API_URL}/` + image} alt="img" />
                     </Link>
                 </div>
                 <div className={styles.text}>

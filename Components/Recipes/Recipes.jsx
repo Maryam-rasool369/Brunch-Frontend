@@ -24,7 +24,7 @@ function Recipes() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/recipe')
+    fetch(`${import.meta.env.VITE_API_URL}/recipe`)
       .then((response) => response.json())
       .then((data) => setRecipes(data));
   }, []);
@@ -60,7 +60,7 @@ function Recipes() {
         <>
           <div onClick={() =>navigation(recipe._id)} key={recipe.id} className={styles.recipe}> {/* Ensure key matches backend */}
             <div className={styles.top}>
-              <img src={`http://localhost:3001/${recipe.image}`} alt="img" className={styles.image} />
+              <img src={`${import.meta.env.VITE_API_URL}/${recipe.image}`} alt="img" className={styles.image} />
               <h3 className={styles.title}>
               <TruncatedText text={recipe.title} maxLenght={19} ></TruncatedText>
               </h3>

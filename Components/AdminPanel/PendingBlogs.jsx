@@ -14,7 +14,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
        }
     // const {postStatus,setPostStatus} = useContext(UserContext)
     async function approveBlog() {
-        const response = await fetch(`http://localhost:3001/post/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/post/${_id}`,{
             method:'PATCH',
             credentials:'include',
             // data:data
@@ -25,7 +25,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
     }
     }
     async function deleteBlog() {
-        const response = await fetch(`http://localhost:3001/post/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/post/${_id}`,{
             method:'DELETE',
             credentials:'include',
         }
@@ -39,7 +39,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
             <div className={styles.post}>
                 <div className={styles.image}>
                     <Link to={`/blogs/${_id}`} className={styles.link}>
-                        <img src={'http://localhost:3001/' + image} alt="img" />
+                        <img src={`${import.meta.env.VITE_API_URL}/` + image} alt="img" />
                     </Link>
                 </div>
                 <div className={styles.text}>

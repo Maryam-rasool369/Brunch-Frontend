@@ -9,7 +9,7 @@ function RecipeDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/recipe/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/recipe/${id}`)
       .then((response) => response.json())
       .then((data) => setRecipe(data))
       .catch((error) => console.error('Error fetching recipe:', error));
@@ -62,7 +62,7 @@ function RecipeDetails() {
         {/* Right Side: Image */}
         <div className={styles.right}>
           <img
-            src={`http://localhost:3001/${recipe.image}`}
+            src={`${import.meta.env.VITE_API_URL}/${recipe.image}`}
             alt="img"
             className={styles.image}
           />

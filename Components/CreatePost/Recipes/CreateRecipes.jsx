@@ -53,7 +53,7 @@ function CreateRecipes({redirection}) {
 
         event.preventDefault();
 
-        const response = await fetch('http://localhost:3001/recipe',{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/recipe`,{
             method:'POST',
             body:data,
             credentials:'include'

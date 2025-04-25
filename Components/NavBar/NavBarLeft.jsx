@@ -21,7 +21,7 @@ function NavBarBottom() {
         console.log(option)
         setMenuOpen(false)
         if(option === 'logout'){
-            fetch('http://localhost:3001/logout',{
+            fetch(`${import.meta.env.VITE_API_URL}/logout`,{
                 credentials: 'include',
                 method: 'POST'
             }).then(response =>{
@@ -39,7 +39,7 @@ function NavBarBottom() {
     useEffect(() => {
             // Check if user is logged in by checking email or a token
             const fetchProfile = async () => {
-              const response = await fetch('http://localhost:3001/profile', {
+              const response = await fetch(`${import.meta.env.VITE_API_URL}/profile`, {
                     credentials: 'include',
               });
               if (response.ok) {

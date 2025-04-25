@@ -18,7 +18,7 @@ function Register() {
   const data = { firstName, lastName, email, password };
   console.log('Data being sent:', data); // Log the payload to debug
 
-  const response = await fetch('http://localhost:3001/register', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json' },

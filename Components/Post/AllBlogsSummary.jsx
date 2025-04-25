@@ -19,7 +19,7 @@ function AllBlogsSummary({ posts }) {
       {posts.map((post) => (
         <div key={post._id} className={styles.post}>
           <div className={styles.imageContainer}>
-            <img onClick={()=>navigation(post._id)} src={`http://localhost:3001/${post.image}`} alt="Blog" className={styles.image} />
+            <img onClick={()=>navigation(post._id)} src={`${import.meta.env.VITE_API_URL}/${post.image}`} alt="Blog" className={styles.image} />
           </div>
           <div onClick={()=>navigation(post._id)} className={styles.content}>
             <div className={styles.info}>

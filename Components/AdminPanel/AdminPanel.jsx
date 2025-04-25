@@ -11,12 +11,12 @@ function AdminPanel() {
     const [recipes,setRecipes] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3001/post').then(response=>
+        fetch(`${import.meta.env.VITE_API_URL}/post`).then(response=>
         {response.json().then(posts=>
             {setPosts(posts)})})
     },[])
     useEffect(()=>{
-        fetch('http://localhost:3001/recipe').then(response=>
+        fetch(`${import.meta.env.VITE_API_URL}/recipe`).then(response=>
         {response.json().then(recipes=>
             {setRecipes(recipes)})})
     },[])
