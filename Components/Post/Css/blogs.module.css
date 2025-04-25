@@ -1,3 +1,15 @@
 .blogs{
 margin-top: 80px;
 }
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+
+.dots {
+    margin-left: 10px;
+}

@@ -44,7 +44,9 @@ function Recipes() {
   const navigation = (recipeId) =>{
     navigate(`/recipes/${recipeId}`)
   }
-   if (!recipes) {
+
+
+if (!recipes) {
      return (
        <div className={styles.loading}>
          Loading

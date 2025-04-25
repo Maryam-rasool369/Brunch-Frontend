@@ -1,5 +1,4 @@
 // import React from 'react'
-import { SyncLoader } from "react-spinners";
 import { MdEdit } from "react-icons/md";
 import { format } from 'date-fns'
 import { useContext, useEffect, useState } from 'react'

@@ -1,4 +1,3 @@
-import { SyncLoader } from "react-spinners";
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import AllBlogsSummary from './AllBlogsSummary';
@@ -20,11 +19,7 @@ function AllBlogs() {
 
   const communityBlogs = posts.filter(post => post.author.email !== "rasoolmaryam57@gmail.com")
 
- if (!posts) {
-        return <div className={styles.loading}>Loading<SyncLoader
-        color="#4A4A4A" size={6} speedMultiplier={0.5} className={styles.dots} />
-        </div>
-    }
+
   return (
     <>
     {type === "latestBlogs" && (

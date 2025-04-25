@@ -1,7 +1,6 @@
 import { format } from 'date-fns';
 import styles from './Css/allBlogsSummary.module.css';
 import { useNavigate } from 'react-router-dom';
-import { SyncLoader } from "react-spinners";
 
 function AllBlogsSummary({ posts }) {
   const navigate =useNavigate()
@@ -15,11 +14,6 @@ function AllBlogsSummary({ posts }) {
   const navigation = (postId) =>{
     navigate(`/blogs/${postId}`)
   }
-  if (!posts) {
-          return <div className={styles.loading}>Loading<SyncLoader
-          color="#4A4A4A" size={6} speedMultiplier={0.5} className={styles.dots} />
-          </div>
-      }
   return (
     <div className={styles.container}>
       {posts.map((post) => (

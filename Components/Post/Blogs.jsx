@@ -1,4 +1,5 @@
 import styles from './Css/blogs.module.css'
+import { SyncLoader } from "react-spinners";
 
 import { useEffect, useState } from "react"
 // import Post from "./post"
@@ -16,6 +17,13 @@ function Posts() {
             {setPosts(posts)})})
     },[])
     const adminPosts = posts.filter(post => post.author.email === 'rasoolmaryam57@gmail.com')
+
+    if (!posts) {
+            return <div className={styles.loading}>Loading<SyncLoader
+            color="#4A4A4A" size={6} speedMultiplier={0.5} className={styles.dots} />
+            </div>
+        }
+    
   return (
     <div className={styles.blogs}>
       <BlogHeroSection></BlogHeroSection>
