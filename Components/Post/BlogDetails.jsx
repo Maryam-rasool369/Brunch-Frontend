@@ -11,7 +11,7 @@ function PostDetails() {
     const {id} = useParams()
     const {userEmail} = useContext(UserContext)
     useEffect(()=>{
-        fetch(`${import.meta.env.VITE_API_URL}/post/${id}`).then(response =>{
+        fetch(`${import.meta.env.VITE_API_URL}post/${id}`).then(response =>{
             response.json().then(post=>{
                 setPostInfo(post)
             })

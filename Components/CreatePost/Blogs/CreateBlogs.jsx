@@ -44,7 +44,7 @@ function CreateBlogs({redirection}) {
 
         event.preventDefault();
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/post`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}post`,{
             method:'POST',
             body:data,
             credentials:'include'

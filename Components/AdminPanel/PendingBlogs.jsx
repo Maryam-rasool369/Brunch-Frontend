@@ -14,7 +14,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
        }
     // const {postStatus,setPostStatus} = useContext(UserContext)
     async function approveBlog() {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/post/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}post/${_id}`,{
             method:'PATCH',
             credentials:'include',
             // data:data
@@ -25,7 +25,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
     }
     }
     async function deleteBlog() {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/post/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}post/${_id}`,{
             method:'DELETE',
             credentials:'include',
         }

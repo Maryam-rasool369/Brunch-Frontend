@@ -11,7 +11,7 @@ function Posts() {
   
     const [posts,setPosts] = useState([])
     useEffect(()=>{
-        fetch(`${import.meta.env.VITE_API_URL}/post`).then(response=>
+        fetch(`${import.meta.env.VITE_API_URL}post`).then(response=>
         {response.json().then(posts=>
             {setPosts(posts)})})
     },[])
