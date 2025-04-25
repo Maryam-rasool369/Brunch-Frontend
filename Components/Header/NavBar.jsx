@@ -30,7 +30,7 @@ function NavBar() {
             }
         };
         fetchProfile();
-    }, []);
+    }, [userEmail]);
 
     useEffect(() => {
         const handleResize = () => {

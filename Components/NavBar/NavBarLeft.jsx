@@ -52,7 +52,7 @@ function NavBarBottom() {
             };
           
             fetchProfile();
-          });
+          },[userEmail]);
 
           
           const navigation = () => {

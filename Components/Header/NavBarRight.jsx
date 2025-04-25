@@ -33,7 +33,7 @@ function NavBarRight() {
             };
           
             fetchProfile();
-          },[]);
+          },[userEmail]);
 
           const handleOptionClick = (option)=>{
             console.log(option)
