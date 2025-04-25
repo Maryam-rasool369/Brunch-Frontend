@@ -18,7 +18,7 @@ import Recipes from '../Components/Recipes/Recipes';
 import RecipeDetails from '../Components/Recipes/RecipeDetails';
 import { lazy } from 'react';
 import Footer from '../Components/Footer/Footer';
-const Header = lazy(()=> import ('../Components/Header/header'))
+const Header = lazy(()=> import ('../Components/Header/Header'))
 const HomePage = lazy(()=> import ('../Components/HomePage/HomePage'))
 
 function App() {
