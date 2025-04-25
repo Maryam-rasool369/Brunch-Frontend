@@ -29,7 +29,7 @@ function Login() {
             setUserEmail(userInfo.email)
             setTimeout(() => {
               setRedirect(true);
-              navigate('/inspireOthers'); // Explicitly navigate to 'inspireOthers'
+              navigate('/inspireOthers');
           }, 1000)
             // setTimeout(() => setRedirect(true), 1000)
             // alert('Login successful')
