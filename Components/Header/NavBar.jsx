@@ -21,6 +21,7 @@ function NavBar() {
         const fetchProfile = async () => {
             const response = await fetch(`${import.meta.env.VITE_API_URL}profile`, {
                 credentials: 'include',
+                method: "GET",
             });
             if (response.ok) {
                 const userInfo = await response.json();
