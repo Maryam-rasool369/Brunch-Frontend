@@ -1,6 +1,6 @@
 import styles from './Css/cuisines.module.css'
 
-import image from '../../Assets/Cuisines/top-view-dishes-with-pasta-risotto.jpg'
+// import image from '../../Assets/Cuisines/top-view-dishes-with-pasta-risotto.jpg'
 import {para} from "../../Data/Cuisines"
 import {cuisinesDesc} from '../../Data/Cuisines'
 import { useLocation, useSearchParams } from 'react-router-dom'
@@ -26,7 +26,7 @@ function Cuisines() {
         {/* <div className={styles.container}> */}
         <div className={styles.main}>
             <div className={styles.heading}>A Culinary World Tour: Exploring Different Types of Cuisines</div>
-            <img className={styles.mainImage} src={image} alt="cuisines" />
+            <img className={styles.mainImage} src='/top-view-dishes-with-pasta-risotto.jpg' alt="cuisines" />
             <p className={styles.para}>{para.text}</p>
         </div>
 

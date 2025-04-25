@@ -1,4 +1,4 @@
-import bowl from '../../Assets/HomePage/erasebg-transformed small.png'
+// import bowl from
 import image from '../../Assets/HomePage/homeBgHeroSection5.png'
 import styles from './Css/backgroundImage.module.css'
 
@@ -6,7 +6,7 @@ function BackgroundImage() {
   return (
     <div className={styles.imageDiv}>
         <img src={image} alt="bg" className={styles.image} />
-        <img src={bowl} alt="food bowl" className={styles.imageBowl} />
+        <img src='/erasebg-transformed small.png' alt="food bowl" className={styles.imageBowl} />
 
     </div>
   )
