@@ -24,7 +24,7 @@ function Recipes() {
   };
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/recipe`)
+    fetch(`${import.meta.env.VITE_API_URL}recipe`)
       .then((response) => response.json())
       .then((data) => setRecipes(data));
   }, []);

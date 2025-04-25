@@ -16,7 +16,7 @@ function AdminPanel() {
             {setPosts(posts)})})
     },[])
     useEffect(()=>{
-        fetch(`${import.meta.env.VITE_API_URL}/recipe`).then(response=>
+        fetch(`${import.meta.env.VITE_API_URL}recipe`).then(response=>
         {response.json().then(recipes=>
             {setRecipes(recipes)})})
     },[])

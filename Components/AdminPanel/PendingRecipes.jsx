@@ -13,7 +13,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
        }
     // const {postStatus,setPostStatus} = useContext(UserContext)
     async function approveRecipe() {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/recipe/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}recipe/${_id}`,{
             method:'PATCH',
             credentials:'include',
             // data:data
@@ -24,7 +24,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
     }
     }
     async function deleteRecipe() {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/recipe/${_id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}recipe/${_id}`,{
             method:'DELETE',
             credentials:'include',
         }

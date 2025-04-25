@@ -9,7 +9,7 @@ function RecipeDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/recipe/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}recipe/${id}`)
       .then((response) => response.json())
       .then((data) => setRecipe(data))
       .catch((error) => console.error('Error fetching recipe:', error));
