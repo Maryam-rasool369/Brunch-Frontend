@@ -39,7 +39,7 @@ function PendingBlogs({_id,title,summary,image,createdAt,author,removePost}) {
             <div className={styles.post}>
                 <div className={styles.image}>
                     <Link to={`/blogs/${_id}`} className={styles.link}>
-                        <img src={`${import.meta.env.VITE_API_URL}/` + image} alt="img" />
+                        <img src={`${import.meta.env.VITE_API_URL}` + image} alt="img" />
                     </Link>
                 </div>
                 <div className={styles.text}>

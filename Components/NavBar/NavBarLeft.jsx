@@ -21,7 +21,7 @@ function NavBarBottom() {
         console.log(option)
         setMenuOpen(false)
         if(option === 'logout'){
-            fetch(`${import.meta.env.VITE_API_URL}/logout`,{
+            fetch(`${import.meta.env.VITE_API_URL}logout`,{
                 credentials: 'include',
                 method: 'POST'
             }).then(response =>{

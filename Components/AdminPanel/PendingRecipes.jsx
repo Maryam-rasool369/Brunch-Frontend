@@ -38,7 +38,7 @@ function PendingRecipes({_id,title,prepTime,cookTime,image,createdAt,author,remo
             <div className={styles.post}>
                 <div className={styles.image}>
                     <Link to={`/blogs/${_id}`} className={styles.link}>
-                        <img src={`${import.meta.env.VITE_API_URL}/` + image} alt="img" />
+                        <img src={`${import.meta.env.VITE_API_URL}` + image} alt="img" />
                     </Link>
                 </div>
                 <div className={styles.text}>

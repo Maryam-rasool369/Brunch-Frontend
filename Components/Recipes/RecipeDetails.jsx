@@ -62,7 +62,7 @@ function RecipeDetails() {
         {/* Right Side: Image */}
         <div className={styles.right}>
           <img
-            src={`${import.meta.env.VITE_API_URL}/${recipe.image}`}
+            src={`${import.meta.env.VITE_API_URL}${recipe.image}`}
             alt="img"
             className={styles.image}
           />

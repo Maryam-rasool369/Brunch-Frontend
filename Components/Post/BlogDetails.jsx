@@ -39,7 +39,7 @@ function PostDetails() {
 
             <h1 className={styles.title}>{postInfo.title}</h1>
             <div className={styles.imageContainer}>
-                <img src={`${import.meta.env.VITE_API_URL}/${postInfo.image}`} alt="Blog" className={styles.image} />
+                <img src={`${import.meta.env.VITE_API_URL}${postInfo.image}`} alt="Blog" className={styles.image} />
             </div>
             <div className={styles.info}>
                 <p className={styles.author}>By {postInfo.author.firstName} {postInfo.author.lastName}</p>

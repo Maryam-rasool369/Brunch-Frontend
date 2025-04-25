@@ -16,7 +16,7 @@ function Login() {
         event.preventDefault();
         
         const data = {email,password}
-        const response =await fetch(`${import.meta.env.VITE_API_URL}/login`,{
+        const response =await fetch(`${import.meta.env.VITE_API_URL}login`,{
             method:'POST',
             body: JSON.stringify(data),
             headers:{'content-Type': 'application/json'},
