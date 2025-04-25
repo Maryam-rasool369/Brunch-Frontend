@@ -20,9 +20,9 @@ function Links() {
     <li className={styles.navItem}>
       <NavLink className={styles.navLink}>Recipes</NavLink>
     </li>
-    <li className={styles.navItem}>
+    {/* <li className={styles.navItem}>
       <NavLink className={styles.navLink}>About</NavLink>
-    </li>
+    </li> */}
   </ul>
   
   )

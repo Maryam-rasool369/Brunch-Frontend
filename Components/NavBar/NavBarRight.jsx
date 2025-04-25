@@ -5,10 +5,7 @@ import image from '../../Assets/Logo/Borcelle_Kitchen-removebg-preview.png'
 import { NavLink } from 'react-router-dom'
 
 function NavBarTop() {
-    
-
-
-  return (
+      return (
 
     <div className={styles.navLogo}>
     <NavLink to={'/'} className={styles.logoLink}>
