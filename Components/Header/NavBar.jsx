@@ -19,7 +19,8 @@ function NavBar() {
 
     useEffect(() => {
         const fetchProfile = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}profile`, {
+            // const response = await fetch(`${import.meta.env.VITE_API_URL}profile`, {
+            const response = await fetch('https://brunch-backend.vercel.app/profile', {
                 credentials: 'include',
                 method: "GET",
             });
