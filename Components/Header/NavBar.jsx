@@ -168,10 +168,10 @@ function NavBar() {
                     ) : (
                         <>
                             <li className={styles.navItem}>
-                                <NavLink to="/login" className={styles.link} onClick={() => setSidebarOpen(false)}>Login</NavLink>
+                                <NavLink to="/login" className={styles.navLink} onClick={() => setSidebarOpen(false)}>Login</NavLink>
                             </li>
                             <li className={styles.navItem}>
-                                <NavLink to="/register" className={styles.link} onClick={() => setSidebarOpen(false)}>Register</NavLink>
+                                <NavLink to="/register" className={styles.navLink} onClick={() => setSidebarOpen(false)}>Register</NavLink>
                             </li>
                         </>
                     )}
